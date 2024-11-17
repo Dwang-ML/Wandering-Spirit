@@ -416,17 +416,9 @@ class Gameplay(arcade.View):
                 if self.screen_to_switch == 'hh':
                     pass
 
-        if self.dash:
-            self.spirit.change_x = 0
-            self.spirit.change_y = 5
-            self.spirit.y_speed = 0
-        else:
-            # Move player
-            self.spirit.change_x = self.spirit.x_speed * -1
-            self.spirit.change_y = self.spirit.y_speed
-            self.spirit.x_speed *= 0.95
-            self.spirit.y_speed -= 0.25
-            self.spirit.angle -= self.spirit.x_speed * 2
+        if arcade.check_for_collision_with_list(self.spirit, self.obs):
+            self.spirit.x_speed *= -1.5
+        self.update_spirit()
         self.spirit.update()
         self.spirit.position = self.spirit.position[0], max(self.spirit.position[1], level_data[level]['lowest'])
 
@@ -516,6 +508,19 @@ class Gameplay(arcade.View):
         particle.scale = 5
         particle.alpha = 230
         self.particles.append(particle)
+
+    def update_spirit(self):
+        if self.dash:
+            self.spirit.change_x = 0
+            self.spirit.change_y = 5
+            self.spirit.y_speed = 0
+        else:
+            # Move player
+            self.spirit.change_x = self.spirit.x_speed * -1
+            self.spirit.change_y = self.spirit.y_speed
+            self.spirit.x_speed *= 0.95
+            self.spirit.y_speed -= 0.25
+            self.spirit.angle -= self.spirit.x_speed * 2
 
 
 class CameraController:
