@@ -288,8 +288,6 @@ class Gameplay(arcade.View):
         self.black = None
         self.camera = None
 
-        self.setup()
-
     def on_show_view(self):
         self.setup()
         self.adjust_camera()
