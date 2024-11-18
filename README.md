@@ -5,6 +5,7 @@ A game made for Micro Jam 027: Retro. The theme is "Only 3 buttons".
  - [How to run the game](https://github.com/Dwang-ML/Wandering-Spirit#how-to-run-the-game)
  - [How to play](https://github.com/Dwang-ML/Wandering-Spirit#how-to-play)
  - [How it satisfies the theme of this jam](https://github.com/Dwang-ML/Wandering-Spirit?tab=readme-ov-file#how-it-satisfies-the-theme-of-this-jam)
+ - [Credits](https://github.com/Dwang-ML/Wandering-Spirit?tab=readme-ov-file#credits)
 
 # How to run the game
 1. Download the project and unzip it.
@@ -51,3 +52,8 @@ This game satisfies control style because it has very few buttons (only 3, since
 This game does NOT satisfy theme and story, since there was not enough time to include the backstory.
 
 This game satisfies UI because the UI is very self-explanatory and simple.
+
+# Credits
+All credits for art are given to Dwang-ML, all art can be found here: https://www.pixilart.com/dwang-ml/gallery
+Two background music are both made by Dwang-ML using BandLab.
+Sound effects are generated using https://sfxr.me/
